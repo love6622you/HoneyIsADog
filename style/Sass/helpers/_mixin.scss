@@ -1,0 +1,75 @@
+@mixin mobile {
+  @media (max-width: $xs-media) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (max-width: $sm-media) {
+    @content;
+  }
+}
+
+@mixin small-pc {
+  @media (max-width: $md-media) {
+    @content;
+  }
+}
+
+@mixin bgImgSize($height) {
+  width: 100%;
+  height: $height;
+}
+
+@mixin bgImgProperty() {
+  //   background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@mixin btnSet($primaryColor, $fontColor) {
+  background-color: transparent;
+  border: $primaryColor solid 2px;
+  color: $primaryColor;
+  border-radius: 0%;
+
+  &:hover {
+    background-color: lighten($primaryColor, 5%);
+    color: $fontColor;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@mixin shadowText {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black-color, 0.5);
+  color: $white-color;
+  font-size: $base-fontsize * 2.5;
+  font-weight: 700;
+  transition: 0.5s;
+  letter-spacing: $base-spacing;
+}
+
+@mixin textShadow($color) {
+  text-shadow: 2px 2px 8px $color;
+}
+
+@mixin baseImageSet($w, $h) {
+  width: $w;
+  height: $h;
+  background-size: cover;
+}
+
+@mixin hide-text {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}

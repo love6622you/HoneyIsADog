@@ -1,0 +1,45 @@
+// Size Set
+$base-fontsize: 10px; //基本字形大小
+$base-spacing: 10px; //基本間距
+$base-lineHeight: 1.6;
+$base-length: 200px;
+$pic-height: 615px;
+
+// Nav
+$navUnderline-spacing: 18px;
+
+$ContentInfo-maxWidth: 450px;
+
+// Color Set
+$primary-color: #ffa5a5; //original : #ffcfdf
+$secondary-color: #ffffc2; //original : fefdca
+$accent-color: #c8e7ed; //original : e0f9b5
+$support-color: #bfcfff; //original : a5dee5
+
+$white-color: #fff;
+$black-color: #000;
+$blackLight-color: lighten($black_color, 97%);
+
+// 漸層顏色
+$gradient-color--start: lighten(#ffa5a5, 10%);
+$gradient-color--end: $white-color;
+
+// 手機版 背景顏色
+$sm-Background-color: lighten($primary-color, 5%);
+
+// Nav 顏色
+$nav-font-color: $black-color;
+
+// Breakpoints
+$lg-media: 1024px;
+$md-media: 992px;
+$sm-media: 768px;
+$xs-media: 568px;
+
+$jumbortron_image-url: '/image/bg.jpg';
+$photoSticker-url: '/image/photo_sticker.jpg';
+$about_image-url: '/image/about.jpg';
+$meet_image-url: '/image/meet.jpg';
+$gallery__img--hipster: '/image/hipster_1.jpg';
+$gallery__img--cute: '/image/cute_1.jpg';
+$gallery__img--stupid: '/image/stupid_1.jpg';

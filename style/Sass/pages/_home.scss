@@ -1,0 +1,91 @@
+.category {
+  font-size: $base-fontsize * 3;
+  font-weight: 700;
+  letter-spacing: $base-fontsize * 0.8;
+  padding: $base-spacing * 10 0;
+  color: $primary-color;
+
+  @include pad {
+    padding: $base-spacing * 6 0;
+  }
+
+  > span {
+    font-size: $base-fontsize * 1.6;
+  }
+
+  &[class*='text-shadow'] {
+    @include textShadow(darken($secondary-color, 5%));
+  }
+}
+
+.content {
+  line-height: $base-lineHeight;
+  width: 100%;
+
+  > .content__img {
+    @include baseImageSet($base-length * 1.2, $base-length * 1.2);
+    background-position: center bottom;
+    border-radius: 10%;
+
+    @include pad {
+      margin: 0 auto;
+    }
+
+    &[class*='content__img--about'] {
+      background-image: url($about_image-url);
+    }
+
+    &[class*='content__img--meet'] {
+      background-image: url($meet_image-url);
+    }
+  }
+
+  > .content__info {
+    max-width: $base-length * 3;
+    letter-spacing: $base-fontsize * 0.6;
+    margin: 0 $base-spacing;
+
+    @include pad {
+      margin: $base-spacing * 2 0;
+    }
+  }
+}
+
+.imgList {
+  width: 100%;
+  text-align: center;
+}
+
+.imgList__img {
+  position: relative;
+  @include baseImageSet($base-length * 1.2, $base-length * 1.2);
+  background-position: 40% 80%;
+  border-radius: 50%;
+  margin: $base-spacing * 1.2 auto;
+  cursor: pointer;
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    content: '敬請期待？';
+    @include shadowText();
+    border-radius: 50%;
+    padding: 100px 0;
+  }
+
+  &[class*='imgList__img--hipster'] {
+    background-image: url($gallery__img--hipster);
+  }
+
+  &[class*='imgList__img--cute'] {
+    background-image: url($gallery__img--cute);
+  }
+
+  &[class*='imgList__img--stupid'] {
+    background-image: url($gallery__img--stupid);
+  }
+}

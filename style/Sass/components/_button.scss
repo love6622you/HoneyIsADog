@@ -1,0 +1,26 @@
+// 按鈕
+.btn{
+    padding: $base_spacing $base_spacing * 3.2;
+    margin-top: $base_spacing * 3  ;
+    @include btnSet($primary-color , $white-color);
+
+    @include pad {
+        @include btnSet($support-color , $white-color);
+    }
+} ;
+ 
+.btn-accent {
+    @include btnSet($accent-color , $white-color);
+
+    @include pad {
+        @include btnSet(adjust-hue($accent-color , 5%) , $white-color);
+    }
+}
+
+.btn-support {
+    @include btnSet($support-color , $white-color);
+
+    @include pad {
+        @include btnSet(adjust-hue($support-color , 5%) , $white-color);
+    }
+}
