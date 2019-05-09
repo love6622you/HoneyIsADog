@@ -59,7 +59,7 @@
   }
 
   @include pad {
-    font-size: $base-fontsize * 3.4;
+    font-size: $base-fontsize * 3.2;
     color: lighten($white-color, 10%);
   }
 }
