@@ -409,7 +409,7 @@ footer {
 
 @media (max-width: 768px) {
   .imgContent__title {
-    font-size: 32px;
+    font-size: 30px;
     color: white;
   }
 }
